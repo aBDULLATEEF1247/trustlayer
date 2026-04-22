@@ -1,12 +1,5 @@
-try:
-    from supabase import create_client
-except Exception as e:
-    import streamlit as st
-    st.error("Supabase failed to load. Check requirements.txt deployment.")
-    st.stop()
-
 import streamlit as st
-from supabase import create_client
+from supabase import create_client, Client
 import pandas as pd
 
 # -----------------------------
@@ -15,7 +8,7 @@ import pandas as pd
 SUPABASE_URL = "https://yiuxfjpemkslzmvyshce.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlpdXhmanBlbWtzbHptdnlzaGNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4MTI2NjgsImV4cCI6MjA5MjM4ODY2OH0.wW5xGxR5sT_Qdq54eKPzYZupxsV5LHGqlabemyzqwnA"
 
-supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 st.set_page_config(page_title="TrustLayer Dashboard", layout="centered")
 
