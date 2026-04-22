@@ -1,3 +1,10 @@
+try:
+    from supabase import create_client
+except Exception as e:
+    import streamlit as st
+    st.error("Supabase failed to load. Check requirements.txt deployment.")
+    st.stop()
+
 import streamlit as st
 from supabase import create_client
 import pandas as pd
