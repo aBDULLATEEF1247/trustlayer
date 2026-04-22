@@ -81,12 +81,12 @@ TrustLayer aims to:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 Built for AI innovation hackathon focused on **Smart Financial Systems and AI-driven security solutions**.
 
 ---
 
-## ⚠️ Disclaimer
+##  Disclaimer
 
 This system is for educational and prototype purposes only and should not be used as a sole financial decision-making tool.
